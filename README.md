@@ -1,6 +1,5 @@
 # PythonMathFun
-Just fun for small math problems solved by python.
 
-Every code file is independent.
+Python math library and tools 
 
 Python version:3.6
