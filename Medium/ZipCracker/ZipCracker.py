@@ -5,7 +5,10 @@ Demo: python3 ZipCracker.py -f demo.zip -d dictionary.txt
 '''
 import zipfile
 import  optparse
-from threading import  Thread
+import threading
+from threading import Thread
+
+threadmax = threading.BoundedSemaphore(1000)
 
 def extractFile(zFile,password):
     try:
@@ -14,6 +17,8 @@ def extractFile(zFile,password):
     except Exception as err:
         #print(" [-] cracking ... status: failed, try password:",password)
         pass
+    finally:
+        threadmax.release()
 
 def main():
     parser=optparse.OptionParser("\nUsage:\n\npython3 ZipCracker.py -f <zipfile> -d <dictionaryfile>"
@@ -30,6 +35,7 @@ def main():
     zFile=zipfile.ZipFile(zname)
     passFile=open(dname)
     for line in passFile.readlines():
+        threadmax.acquire()
         password=line.strip('\n')
         t=Thread(target=extractFile,args=(zFile,password))
         t.start()
