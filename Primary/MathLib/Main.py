@@ -2,13 +2,11 @@
 Library Test Entrance
 '''
 
-from Graphic import *
-
+from Probability.Functions import *
 
 
 def main():
-    drawer=Drawer()
-    drawer.Plot()
+    print(F(4))
 
 if __name__ == '__main__':
         main()
