@@ -10,7 +10,7 @@ def main():
     #print(str(A(4,2)) + ":" + str(C(4,2)))
 
     #牛顿二项式定理
-    #print(ExpandBinomial(4))
+    print(ExpandBinomial(4))
 
 
 
