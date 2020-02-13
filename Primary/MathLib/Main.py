@@ -13,7 +13,9 @@ def main():
     #print(ExpandBinomial(4))
 
     #求复利
-    print(CI(100,0.1,5))
+    print(CI(100, 0.1, 5))
+    print(CIE(100, 0.1, 5))
+    print(GetCIRate(100,165,5))
 
 
 
