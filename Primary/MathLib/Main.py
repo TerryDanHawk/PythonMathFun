@@ -13,9 +13,15 @@ def main():
     #print(ExpandBinomial(4))
 
     #求复利
-    print(CI(100, 0.1, 5))
-    print(CIE(100, 0.1, 5))
-    print(GetCIRate(100,165,5))
+    #print(CI(100, 0.1, 5))
+    #print(CIE(100, 0.1, 5))
+    #print(GetCIRate(100,165,5))
+
+    #极坐标转换
+    print(ToPolarC(3,4))
+    print(ToCartesianC(5,53.13))
+    print(help(ToCartesianC))
+
 
 
 
