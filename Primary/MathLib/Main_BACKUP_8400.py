@@ -2,10 +2,18 @@
 Library Test Entrance
 '''
 
+<<<<<<< HEAD
+from Probability.library import *
+
+=======
 from Probability.Functions import *
 from Calculus.Functions import  *
+>>>>>>> 39dc735d0bbf90093cc381d79282ef33d403e3c9
 
 def main():
+    #求4的阶乘4!=4*3*2*1
+    #print(F(4))
+
     #排列与组合，从4个中选取2个
     #print(str(A(4,2)) + ":" + str(C(4,2)))
 
